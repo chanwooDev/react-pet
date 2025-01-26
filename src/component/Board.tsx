@@ -69,7 +69,7 @@ export function Board() {
   );  
 }
 
-function checkWinner(nextSquares) {
+function checkWinner(nextSquares:string[]) {
   const winnerLogics: number[][]= [
     [0,1,2],
     [3,4,5],
