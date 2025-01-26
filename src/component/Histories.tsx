@@ -6,19 +6,24 @@ export interface IHistory {
 
 interface HistoriesProps {
   histories: IHistory[];
+  takebackClick: (i:number)=>void
 }
-export default function Histories({ histories }: HistoriesProps) {
-  return (<div className="col">
+export default function Histories({ histories, takebackClick}: HistoriesProps) {
+  return (<div style={{ display: "flex", gap: "5px", flexDirection: "column" }}>
     {histories.filter(Boolean).map((history) => {
-      console.log(history.user);
-      console.log(history.position);
-      return <h3 key={history.turnCount}>{history.user + ' ' + history.position.toString()}</h3>;
+      return <History  key={history.turnCount} history={history} takebackClick={takebackClick}/>;
     })}
   </div>);
 }
 interface HistoryProps {
-  histories: IHistory;
+  history: IHistory;
+  takebackClick: (i:number)=>void
 }
-function History({ history }: HistoryProps) {
-  return <h3 key={history.turnCount}>{history.user + ' ' + history.position.toString()}</h3>;
+function History({ history, takebackClick}: HistoryProps) {
+  return <>
+    <div style={{ display: "flex", gap: "8px" }}>
+      <p>{history.user + ' ' + history.position.toString()}</p>
+      <button onClick={()=>takebackClick(history.turnCount)}>Go To Move {history.turnCount}</button>
+    </div>
+  </>
 }
