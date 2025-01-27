@@ -6,7 +6,7 @@ function App() {
   return (
     <>
       <div>
-        <h1>Counters that update together</h1>
+        <h1>Welcome To Tic-Tac-To Game</h1>
         <Board />
     </div>
     </>
