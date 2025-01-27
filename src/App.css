@@ -88,3 +88,21 @@ body {
 .game-info {
   margin-left: 20px;
 }
+
+.container {
+  display: flex; /* Flexbox 사용 */
+  height: 100vh; /* 화면 전체 높이 */
+}
+
+.sidebar {
+  width: 250px; /* 사이드 메뉴 너비 */
+  background-color: #f4f4f4; /* 배경색 */
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+}
+
+.content {
+  flex: 1; /* 남은 공간을 차지 */
+  padding: 20px;
+  background-color: #ffffff;
+}
