@@ -1,7 +1,7 @@
 import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
 import './App.css'
 import { Board } from './component/Board';
-import Empty from './component/Empty';
+import Home from './component/Home';
 
 function App() {
 
@@ -20,7 +20,7 @@ function App() {
         </div>
         <div className="content">
           <Routes>
-            <Route path="/" element={<Empty />} />
+            <Route path="/" element={<Home />} />
             <Route path="/tic-tac-to" element={<Board />} />
           </Routes>
         </div>
