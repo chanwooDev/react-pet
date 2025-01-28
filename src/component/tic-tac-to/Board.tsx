@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import Histories, { IHistory } from '../Histories';
-import Squares from '../Squares';
-import TurnHead from '../TurnHead';
+import Histories, { IHistory } from './Histories';
+import Squares from './Squares';
+import TurnHead from './TurnHead';
 
 export function Board() {
   const [squares, setSquares] = useState(Array(9).fill(null));
