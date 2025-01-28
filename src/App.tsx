@@ -1,6 +1,6 @@
 import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
 import './App.css'
-import { Board } from './component/Board';
+import { Board } from './component/tic-tac-to/Board';
 import Home from './component/Home';
 
 function App() {
@@ -15,6 +15,7 @@ function App() {
           <ul>
             <li><Link to="/">Home</Link></li>
             <li><Link to="/tic-tac-to">Play Tic Tac To</Link></li>
+            <li><Link to="/product">Product</Link></li>
           </ul>
         </nav>
         </div>
@@ -22,6 +23,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/tic-tac-to" element={<Board />} />
+            <Route path="/product" element={<Board />} />
           </Routes>
         </div>
       </BrowserRouter>
